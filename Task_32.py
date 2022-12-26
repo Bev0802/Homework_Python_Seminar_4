@@ -5,7 +5,7 @@
 def SearchRepeatNumbers(list_string):
     lens = len(list_string)
     i=0
-    k=1
+    k=0
     while i<lens-1:
         l = list_string[i]
         while k<lens-1:
