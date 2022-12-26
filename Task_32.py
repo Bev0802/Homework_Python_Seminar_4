@@ -10,6 +10,8 @@ def SearchRepeatNumbers(list_string):
         l = list_string[i]
         while k<lens-1:
          k=k+1
+         if k==i:
+            k=k+1
          if l==list_string[k]:
              m=list_string[k]
              list_string.remove(m)
@@ -17,7 +19,7 @@ def SearchRepeatNumbers(list_string):
              lens=len(list_string)
              break
         i=i+1
-        k=i
+        k=-1
     list_int=list(map(int, list_string))
     return list_int
 #Функция находит повторяющиеся числа в числовом списке и выводит список уникальных неповторяющихся элементов исходной последовательности.
