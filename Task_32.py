@@ -1,7 +1,7 @@
 '''Задайте последовательность чисел. Напишите программу, которая выведет список
  неповторяющихся элементов исходной последовательности.'''
 
-#Функция находит повторяющиеся числа и выводит список неповторяющихся элементов исходной последовательности.
+#Функция находит повторяющиеся числа в строковом списке и выводит список неповторяющихся элементов исходной последовательности.
 def SearchRepeatNumbers(list_string):
     lens = len(list_string)
     i=0
@@ -20,10 +20,17 @@ def SearchRepeatNumbers(list_string):
         k=i
     list_int=list(map(int, list_string))
     return list_int
+#Функция находит повторяющиеся числа в числовом списке и выводит список уникальных неповторяющихся элементов исходной последовательности.
+def SearchRepeat(lst):
+    new_lst = []
+    [new_lst.append(i) for i in lst if i not in new_lst]
+    return new_lst
+
 
 list_s = list(input("Введите числа через пробел:\n").split())
-list_i=list(map(int, list_s))
 
-print(f'{list_i} => {SearchRepeatNumbers(list_s)}')
+list_i=list(map(int, list_s))
+print(f'Первый вариант решения:{list_i} => {SearchRepeatNumbers(list_s)}')
+print(f'Второй вариант решения:{list_i} => {SearchRepeat(list_i)}')
 
 
