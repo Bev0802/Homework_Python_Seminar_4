@@ -3,25 +3,17 @@
 
 #Функция находит повторяющиеся числа в строковом списке и выводит список неповторяющихся элементов исходной последовательности.
 def SearchRepeatNumbers(list_string):
-    lens = len(list_string)
+    new_lst=[]
     i=0
-    k=0
-    while i<lens-1:
-        l = list_string[i]
-        while k<lens-1:
-         k=k+1
-         if k==i:
-            k=k+1
-         if l==list_string[k]:
-             m=list_string[k]
-             list_string.remove(m)
-             list_string.remove(l)
-             lens=len(list_string)
-             break
-        i=i+1
-        k=-1
-    list_int=list(map(int, list_string))
+    while i<len(list_string):
+      l = list_string[i]
+      count = list_string.count(l)
+      if count==1:
+        new_lst.append(l)
+      i=i+1      
+    list_int=list(map(int, new_lst))
     return list_int
+
 #Функция находит повторяющиеся числа в числовом списке и выводит список уникальных неповторяющихся элементов исходной последовательности.
 def SearchRepeat(lst_int):
     new_lst = []
@@ -31,6 +23,8 @@ def SearchRepeat(lst_int):
 #Программа
 list_s = list(input("Введите числа через пробел:\n").split())
 list_i=list(map(int, list_s))
+
+print(list_new:= set(list_s))
 
 #Вывод результата
 print(f'Первый вариант решения:{list_i} => {SearchRepeatNumbers(list_s)}')
