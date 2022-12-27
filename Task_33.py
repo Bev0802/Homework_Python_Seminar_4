@@ -14,8 +14,10 @@ str_pomial=str_pomial.replace("**1", "")
 str_pomial=str_pomial.replace("x**0","")
 str_pomial += " = 0" 
 
+#Вывод на печать
 print(f"Создали многочлен: k={k} = > {str_pomial}")
 
+#Записть и чтение из файла
 file_polynomial = open("file_polynomial.txt", "w+")
 file_polynomial.write((f"k={k} = > {str_pomial}"))
 file_polynomial = open("file_polynomial.txt", "r")
