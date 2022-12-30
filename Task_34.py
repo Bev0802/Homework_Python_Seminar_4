@@ -1,6 +1,9 @@
 '''Даны два файла, в каждом из которых находится запись многочлена. Задача - сформировать файл, содержащий сумму многочленов.'''
-#функция создает многочлен
+
 from random import randint
+
+'''ФУНКЦИИ'''
+#функция создает многочлен
 def Polynomial():
     k = randint(1,9)
     list_coeff= [randint(0,100) for i in range(k)] + [randint(1,100)] #создала список коэффициентов из случаных числе от 1 до 100
@@ -43,7 +46,7 @@ def StrSumPomial (sumPol):
     str_sum_pomial += " = 0" 
     return str_sum_pomial
 
-##########
+'''ПРОГРАММА'''
 #Записть и чтение из файла file_polynomial1.txt
 file_polynomial1 = open("file_polynomial1.txt", "w+")
 file_polynomial1.write((Polynomial()))
