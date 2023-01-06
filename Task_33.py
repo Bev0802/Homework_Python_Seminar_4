@@ -11,10 +11,10 @@ def Pomial(c):
         list_coeff.append(randint(0,100))
     str_pomial=''
     for i, j in enumerate(list_coeff):
-            if str_pomial==None or k==i:
-                str_pomial=str_pomial + f"{(j,'')[j==1]}x**{i}"
+            if k==i:
+                str_pomial=str_pomial + f"{(j,'')[j==0]}x**{i}"
             else:
-                str_pomial=str_pomial + f"{(j,'')[j==1]}x**{i}+"
+                str_pomial=str_pomial + f"{(j,'')[j==0]}x**{i}+"
           
     lst_pomial = list(str_pomial.split("+"))
     str_pomial = ' + '.join(x for x in lst_pomial[::-1])
